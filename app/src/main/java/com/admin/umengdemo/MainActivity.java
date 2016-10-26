@@ -18,8 +18,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void click(View v) {
-        Log.e(TAG,"click");
-        mManager.onEvent("click");
+        String tag = "";
+
+        switch (v.getId()){
+            case R.id.btn1:
+                Log.e(TAG,"click one");
+                tag = "click";
+                break;
+            case R.id.btn2:
+                Log.e(TAG,"click two");
+                tag = "click1";
+                break;
+
+        }
+
+        mManager.onEvent(tag);
     }
 
     @Override

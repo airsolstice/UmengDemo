@@ -14,11 +14,16 @@ import android.view.View;
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected String TAG = getTag();
+
     protected abstract String getTag();
-    protected Context mContext ;
+
+    protected Context mContext;
     protected int layoutId = getLayoutId();
+
     protected abstract int getLayoutId();
+
     public abstract void click(View v);
+
     protected UmengManager mManager;
 
     @Override
